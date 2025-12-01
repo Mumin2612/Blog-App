@@ -99,14 +99,14 @@ function getPosts() {
 function renderPosts() {
     const posts = getPosts();
 
-    // 1. Если постов нет
+
     if (posts.length === 0) {
         postNode.innerText = 'Тут пока что пусто...';
-        postNode.classList.add('posts--empty');  // делаем текст серым
+        postNode.classList.add('posts--empty'); 
         return;
     }
 
-    // 2. Если посты есть — убираем серый класс
+
     postNode.classList.remove('posts--empty');
 
     let postsHTML = '';
