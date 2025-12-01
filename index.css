@@ -1,5 +1,12 @@
 body {
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 h2 {
@@ -7,27 +14,28 @@ h2 {
 }
 
 .post-title-input {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+  height: 60px;
   box-sizing: border-box;
   display: block;
-  margin-bottom: 30px;
-  width: 500px;
-  height: 60px;
   resize: none;
 }
 
 .post-text-input {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 39px;
+  height: 200px;
   box-sizing: border-box;
   display: block;
-  margin-bottom: 39px;
-  width: 500px;
-  height: 200px;
   resize: none;
 }
 
 .post-title-input,
 .post-text-input {
   padding: 15px;
-  border: 5px;
 }
 
 .post-title-input,
@@ -42,9 +50,10 @@ h2 {
 }
 
 .new-post-btn {
-  box-sizing: border-box;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 58px;
+  box-sizing: border-box;
   background-color: rgba(0, 148, 255, 1);
   color: rgba(255, 255, 255, 1);
   font-size: 24px;
@@ -71,8 +80,11 @@ h2 {
 }
 
 .post {
-  margin-bottom: 40px;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .posts--empty {
@@ -85,15 +97,11 @@ h2 {
   font-size: 22px;
 }
 
-.row {
-  display: flex;
-  gap: 50px;
-  max-width: 1440px;
-  margin: 102px 217px;
-}
-
 .col {
+  width: 100%;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 input:focus,
@@ -104,19 +112,46 @@ textarea:focus {
 .row {
   display: flex;
   gap: 40px;
-  margin: 0 auto;
+  margin: 0 40px;
   padding-top: 100px;
   max-width: 1200px;
   width: 100%;
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .row {
+    gap: 40px;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .col {
+    flex: 1;
+  }
+
+  .post-title-input,
+  .post-text-input,
+  .new-post-btn,
+  .post {
+    width: 100%;
+    max-width: 450px;
+  }
 }
 
 @media (max-width: 768px) {
   .row {
     flex-direction: column;
     gap: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
     margin-top: 40px;
+    overflow-x: hidden;
   }
 
   h2 {
@@ -127,7 +162,7 @@ textarea:focus {
   .post-text-input,
   .new-post-btn {
     width: 100%;
-    max-width: 100%;
+    max-width: 500px;
   }
 
   .post-text-input {
@@ -159,3 +194,4 @@ textarea:focus {
     color: rgba(0, 0, 0, 0.5);
   }
 }
+
