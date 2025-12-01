@@ -1,0 +1,161 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h2 {
+  margin-bottom: 71px;
+}
+
+.post-title-input {
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 60px;
+  resize: none;
+}
+
+.post-text-input {
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 39px;
+  width: 500px;
+  height: 200px;
+  resize: none;
+}
+
+.post-title-input,
+.post-text-input {
+  padding: 15px;
+  border: 5px;
+}
+
+.post-title-input,
+.post-text-input {
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+}
+
+.post-title-input::placeholder,
+.post-text-input::placeholder {
+  color: #a0a0a0;
+}
+
+.new-post-btn {
+  box-sizing: border-box;
+  width: 500px;
+  height: 58px;
+  background-color: rgba(0, 148, 255, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+.post__title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.post__text {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.post__date {
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 148, 255, 1);
+}
+
+.post {
+  margin-bottom: 40px;
+  width: 500px;
+}
+
+.posts--empty {
+  color: #a0a0a0;
+}
+
+.post-error {
+  margin-top: 42px;
+  color: rgba(255, 0, 0, 1);
+  font-size: 22px;
+}
+
+.row {
+  display: flex;
+  gap: 50px;
+  max-width: 1440px;
+  margin: 102px 217px;
+}
+
+.col {
+  flex: 1;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.row {
+  display: flex;
+  gap: 40px;
+  margin: 0 auto;
+  padding-top: 100px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .post-title-input,
+  .post-text-input,
+  .new-post-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .post-text-input {
+    height: 170px;
+  }
+
+  .new-post-btn {
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .posts {
+    font-size: 16px;
+  }
+
+  .post__title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .post__text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .post__date {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
