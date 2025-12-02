@@ -118,19 +118,20 @@ textarea:focus {
   width: 100%;
 }
 
-@media (max-width: 1200px) and (min-width: 769px) {
+@media (max-width: 1200px) {
   .container {
-    max-width: 900px;
+    padding-left: 24px;
+    padding-right: 24px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 100%;
   }
 
   .row {
     gap: 40px;
-    margin: 0 auto;
+    padding-top: 60px;
     width: 100%;
-    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .col {
@@ -142,45 +143,54 @@ textarea:focus {
   .new-post-btn,
   .post {
     width: 100%;
-    max-width: 450px;
+    max-width: 100%;
+  }
+
+  .new-post-btn {
+    height: 58px;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0 auto;
+  }
+
   .row {
     flex-direction: column;
-    gap: 40px;
-    margin-top: 40px;
-    overflow-x: hidden;
+    gap: 32px;
+    padding-top: 40px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   h2 {
     font-size: 26px;
+    margin-bottom: 24px;
   }
 
   .post-title-input,
   .post-text-input,
-  .new-post-btn {
+  .new-post-btn,
+  .post {
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
   }
 
   .post-text-input {
-    height: 170px;
+    height: 160px;
   }
 
   .new-post-btn {
-    height: 55px;
-    font-size: 22px;
-  }
-
-  .posts {
-    font-size: 16px;
+    height: 52px;
+    font-size: 20px;
   }
 
   .post__title {
     font-size: 20px;
-    font-weight: 600;
   }
 
   .post__text {
@@ -190,8 +200,6 @@ textarea:focus {
 
   .post__date {
     font-size: 14px;
-    margin-bottom: 10px;
-    color: rgba(0, 0, 0, 0.5);
   }
 }
 
